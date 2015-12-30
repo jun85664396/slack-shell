@@ -80,9 +80,9 @@ class App
             print Slack.channel_list
           else
             @ws.send({
-              "type": "message",
-              "channel": @location,
-              "text": line.to_s.force_encoding("UTF-8")
+              type: "message",
+              channel: @location,
+              text: line.to_s.force_encoding("UTF-8")
             }.to_json)
           end
         end
